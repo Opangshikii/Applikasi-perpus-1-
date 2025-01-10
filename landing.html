@@ -1,0 +1,175 @@
+<html>
+ <head>
+  <title>
+   Bukukita
+  </title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .top-bar {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .navbar .menu a:hover {
+            color: #4CAF50;
+        }
+        .navbar .login {
+            background-color: #333;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .navbar .login:hover {
+            background-color: #555;
+        }
+        .hero {
+            background: linear-gradient(to bottom, #4CAF50, #2E7D32);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .hero .cta-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .hero .cta-button:hover {
+            background-color: #45A049;
+        }
+        .hero img {
+            width: 600px;
+            height: auto;
+            margin-top: 30px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .navbar .menu a {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+            .navbar .menu a:last-child {
+                border-bottom: none;
+            }
+            .navbar .menu-toggle {
+                display: block;
+                cursor: pointer;
+            }
+            .navbar .menu-toggle .fa-bars {
+                font-size: 24px;
+            }
+            .navbar .menu.active {
+                display: flex;
+            }
+            .hero img {
+                width: 100%;
+                height: auto;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-bar">
+   website perpustakaan Indonesia - Bukukita.com
+  </div>
+  <div class="navbar">
+   <div class="menu">
+    <a href="#home">
+     Home 
+    </a>
+    <a href="kumpulanbuku.html">
+     Kumpulan Buku
+    </a>
+    <a href="transaksi.html">
+     Transaksi
+    </a>
+
+
+
+   </div>
+   <a class="login" href="login1.html">
+    Login
+   </a>
+   <div class="menu-toggle">
+    <i class="fas fa-bars">
+    </i>
+   </div>
+  </div>
+  <div class="hero" id="home">
+   <h1>
+     Website Perpustakaan Indonesia
+   </h1>
+   <p>
+    Selamat Datang di Bukukita.com!
+    Temukan dunia literasi yang tak terbatas dengan aplikasi perpustakaan digital kami.
+    Bergabunglah sekarang dan bawa pengalaman membaca Anda ke level berikutnya! Unduh Bukukita.com dan mulai petualangan literasi Anda hari ini!
+   </p>
+
+   
+
+   <img alt="Illustration of a person working on a website" src="c2733901-33b2-467d-9aaf-e140fade46ed.jpeg"/>
+  </div>
+  <div class="footer">
+   © 2025 bukukita. All rights reserved.
+  </div>
+  <script>
+   document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+  </script>
+ </body>
+</html>

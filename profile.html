@@ -1,0 +1,189 @@
+<html>
+ <head>
+  <title>
+   Halaman Profile
+  </title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .top-bar {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .navbar .menu a:hover {
+            color: #4CAF50;
+        }
+        .navbar .login {
+            background-color: #333;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .navbar .login:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 20px;
+        }
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .profile-container h2 {
+            margin-bottom: 20px;
+        }
+        .profile-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .profile-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .profile-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .profile-photo {
+            margin-bottom: 20px;
+        }
+        .profile-photo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .navbar .menu a {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+            .navbar .menu a:last-child {
+                border-bottom: none;
+            }
+            .navbar .menu-toggle {
+                display: block;
+                cursor: pointer;
+            }
+            .navbar .menu-toggle .fa-bars {
+                font-size: 24px;
+            }
+            .navbar .menu.active {
+                display: flex;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-bar">
+    website perpustakaan Indonesia - Bukukita.com
+  </div>
+  <div class="navbar">
+   <div class="menu">
+    <a href="landing.html">
+     Home 
+    </a>
+    <a href="kumpulanbuku.html">
+     Kumpulan Buku 
+    </a>
+    <a href="transaksi.html">
+     Transaksi 
+    </a>
+
+   </div>
+   <a class="login" href="login1.html">
+    Login
+   </a>
+   <div class="menu-toggle">
+    <i class="fas fa-bars">
+    </i>
+   </div>
+  </div>
+  <div class="content">
+   <div class="profile-container">
+    <h2>
+     Profile
+    </h2>
+    <div class="profile-photo">
+     <img alt="Profile Photo" src="f76071ca9691ef18a3d75dc6ddb779a1.jpg"/>
+    </div>
+    <div class="profile-group">
+     <label for="username">
+      Username
+     </label>
+     <input id="username" readonly="" type="text" value="Dudung 969"/>
+    </div>
+    <div class="profile-group">
+     <label for="email">
+      Email
+     </label>
+     <input id="email" readonly="" type="email" value="Dudung969@gmail.com"/>
+    </div>
+    <div class="profile-group">
+     <label for="phone">
+      Phone
+     </label>
+     <input id="phone" readonly="" type="text" value="081234543546"/>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+    © 2025 bukukita. All rights reserved.
+  </div>
+  <script>
+   document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+  </script>
+ </body>
+</html>

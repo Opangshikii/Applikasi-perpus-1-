@@ -1,0 +1,269 @@
+<html>
+ <head>
+  <title>
+   Halaman Transaksi
+  </title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .top-bar {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .navbar .menu a:hover {
+            color: #4CAF50;
+        }
+        .navbar .login {
+            background-color: #333;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .navbar .login:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #45A049;
+        }
+        .transaction-list {
+            margin-top: 30px;
+        }
+        .transaction-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .transaction-list th,
+        .transaction-list td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .navbar .menu a {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+            .navbar .menu a:last-child {
+                border-bottom: none;
+            }
+            .navbar .menu-toggle {
+                display: block;
+                cursor: pointer;
+            }
+            .navbar .menu-toggle .fa-bars {
+                font-size: 24px;
+            }
+            .navbar .menu.active {
+                display: flex;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="top-bar">
+    website perpustakaan Indonesia - Bukukita.com
+  </div>
+  <div class="navbar">
+   <div class="menu">
+    <a href="landing.html">
+     Home
+    </a>
+    <a href="kumpulanbuku.html">
+     kumpulan Buku 
+    </a>
+
+   </div>
+   <a class="login" href="login1.html">
+    Login
+   </a>
+   <div class="menu-toggle">
+    <i class="fas fa-bars">
+    </i>
+   </div>
+  </div>
+  <div class="content">
+   <div class="form-container">
+    <h2>
+     Form Transaksi
+    </h2>
+    <div class="form-group">
+     <label for="namaBuku">
+      Nama Buku
+     </label>
+     <input id="namaBuku" type="text"/>
+    </div>
+    <div class="form-group">
+     <label for="jumlahBuku">
+      Jumlah Buku
+     </label>
+     <input id="jumlahBuku" type="number"/>
+    </div>
+    <div class="form-group">
+     <label for="kategoriBuku">
+      Kategori Buku
+     </label>
+     <select id="kategoriBuku">
+      <option value="Fiksi">
+       Fiksi
+      </option>
+      <option value="Non-Fiksi">
+       Non-Fiksi
+      </option>
+      <option value="Pendidikan">
+       Pendidikan
+      </option>
+     </select>
+    </div>
+    <div class="form-group">
+     <button id="simpanTransaksi" type="button">
+      Simpan Transaksi
+     </button>
+    </div>
+   </div>
+   <div class="transaction-list">
+    <h2>
+     Daftar Transaksi
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Nama Buku
+       </th>
+       <th>
+        Jumlah Buku
+       </th>
+       <th>
+        Kategori Buku
+       </th>
+      </tr>
+     </thead>
+     <tbody id="transactionTableBody">
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <div class="footer">
+    © 2025 bukukita. All rights reserved.
+  </div>
+  <script>
+   document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+
+        document.getElementById('simpanTransaksi').addEventListener('click', function() {
+            var namaBuku = document.getElementById('namaBuku').value;
+            var jumlahBuku = document.getElementById('jumlahBuku').value;
+            var kategoriBuku = document.getElementById('kategoriBuku').value;
+
+            if (namaBuku && jumlahBuku && kategoriBuku) {
+                var tableBody = document.getElementById('transactionTableBody');
+                var newRow = document.createElement('tr');
+
+                var namaBukuCell = document.createElement('td');
+                namaBukuCell.textContent = namaBuku;
+                newRow.appendChild(namaBukuCell);
+
+                var jumlahBukuCell = document.createElement('td');
+                jumlahBukuCell.textContent = jumlahBuku;
+                newRow.appendChild(jumlahBukuCell);
+
+                var kategoriBukuCell = document.createElement('td');
+                kategoriBukuCell.textContent = kategoriBuku;
+                newRow.appendChild(kategoriBukuCell);
+
+                tableBody.appendChild(newRow);
+
+                // Clear the form
+                document.getElementById('namaBuku').value = '';
+                document.getElementById('jumlahBuku').value = '';
+                document.getElementById('kategoriBuku').value = 'Fiksi';
+            } else {
+                alert('Harap isi semua field!');
+            }
+        });
+  </script>
+ </body>
+</html>
